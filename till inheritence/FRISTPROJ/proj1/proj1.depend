@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1648835409 source:c:\users\adity\desktop\c++\fristproj\proj1\main.cpp
+	<iostream>
+	<string.h>
+
