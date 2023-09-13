@@ -115,6 +115,24 @@ void randomposition(int position,linkedlist *head,int data){
         }
     }
 }
+void reversingLL(linkedlist* head){
+
+    linkedlist * prev = NULL ;
+    linkedlist * current = head ; 
+    linkedlist * next = NULL ; 
+
+    while(current != NULL){
+        //send next pointer to next node to keep track of upcoming nodes
+        next = current->next ; 
+        //point the current->next backwards to reverse
+        current->next = prev ; 
+        //update the prev node
+        prev = current ; 
+        //update the current pointer to new upcoming node 
+        current = next ; 
+    }
+    head = prev ; // so at the last of loop iteration we get the desired head position.
+}
 
 int main()
 {
