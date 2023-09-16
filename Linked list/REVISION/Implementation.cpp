@@ -134,6 +134,21 @@ void reversingLL(linkedlist* head){
     head = prev ; // so at the last of loop iteration we get the desired head position.
 }
 
+linkedlist* recreverse(linkedlist *prev , linkedlist *current){
+   if(current == NULL){
+    return prev ; 
+   }
+
+   linkedlist* next = current->next ; 
+   current->next = prev ; 
+
+   recreverse(next,current) ;
+}
+
+void recursionReversal(){
+    linkedlist *head = recreverse(NULL,head) ; 
+}
+
 int main()
 {
     linkedlist* node1 = new linkedlist(9) ; 
